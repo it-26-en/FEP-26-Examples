@@ -1,5 +1,19 @@
-console.log("JS file works!");
 
+function hello() {
+    //const name = prompt("What is your name?");
+    const name = document.getElementById('name').value;
+    alert(`Hello there ${name}!`);
+}
+
+function nextYear() {
+    // convert numeric input to number:
+    const year = Number(document.getElementById('year').value);
+    alert(`Next year is ${year + 1}!`);
+}
+
+/**
+ * Concatenation
+ */
 const piName = "Pi";
 const piVal = 3.14;
 
