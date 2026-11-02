@@ -2,7 +2,10 @@
 function hello() {
     //const name = prompt("What is your name?");
     const name = document.getElementById('name').value;
-    alert(`Hello there ${name}!`);
+    //alert(`Hello there ${name}!`);
+    document.getElementById('name-output').textContent = `Hello there ${name}!`;
+    //document.getElementById('name-output').textContent = "Hello there " + name + "!";
+
 }
 
 function nextYear() {
