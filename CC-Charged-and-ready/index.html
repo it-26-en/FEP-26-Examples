@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charge indicator</title>
+</head>
+
+<body>
+    <!--<h3>Charge indicator</h3>-->
+
+    <p>
+        <label for="rest-level">What's your name?</label>
+        <input type="text" id="user-name" placeholder="Name">
+    </p>
+
+    <p>
+        <label for="rest-level">How rested do you feel on a scale from 1–5?</label>
+        <!--<input type="number" id="rest-level" placeholder="1-5">-->
+        <input type="range" id="rest-level" min="1" max="5">
+        <button type="button" onclick="calculate()">Calculate</button>
+    </p>
+
+    <p id="charge-result">...</p>
+
+    <script>
+        function calculate() {
+            const userName = document.getElementById('user-name').value;
+            const restLevel = document.getElementById('rest-level').value;
+            
+            //const result = restLevel*20;
+            const result = restLevel/5*100;
+
+            document.getElementById('charge-result').innerHTML = `
+                Hello ${userName}!
+                Your charge level is <b>${result}%</b>
+            `;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
