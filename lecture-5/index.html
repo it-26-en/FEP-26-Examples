@@ -12,13 +12,15 @@
     <script>
         let seconds = 1;
         let timer = null;
+        const stopBtn = document.getElementById('btn-stop');
+        const timerOutput = document.getElementById('timer-output');
 
         timer = setInterval(() => {
-            document.getElementById('timer-output').textContent = seconds;
+            timerOutput.textContent = seconds;
             seconds++;
         }, 1000); 
 
-        document.getElementById('btn-stop').addEventListener('click', () => {
+        stopBtn.addEventListener('click', () => {
             clearInterval(timer);
             timer = null;
         });
